@@ -1,0 +1,46 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Current Device",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "Pixel 6a API 34",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "emulator-5554",
+          },
+        {
+            "name": "iPhone 15 Pro Max",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "8EAAA30E-4A10-4D70-A656-C4B50C9A9ADF",
+        },
+        // {
+        //     "name": "granity (profile mode)",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "flutterMode": "profile"
+        // },
+        // {
+        //     "name": "granity (release mode)",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "flutterMode": "release"
+        // }
+    ],
+    "compounds": [
+        {
+          "name": "All Devices",
+          "configurations": [
+            "Pixel 6a API 34",
+            "iPhone 15 Pro Max"
+          ],
+        }
+      ]
+}
