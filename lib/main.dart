@@ -4,7 +4,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'package:granity/routes.dart';
 
-import 'colors.dart';
+import 'package:granity/design/colors.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

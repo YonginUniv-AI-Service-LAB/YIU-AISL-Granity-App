@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-class ColorStyles extends Color {
-  const ColorStyles(int value) : super(value);
+abstract class ColorStyles {
+  ColorStyles._();
+  // const ColorStyles(int value) : super(value);
 
   // 앱 시그니처 컬러
   static const appMainColor = Color(0xff00a871);

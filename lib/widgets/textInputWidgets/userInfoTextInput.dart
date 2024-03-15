@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:granity/colors.dart';
+import 'package:granity/design/colors.dart';
 
 Container UserInfoTextInputWidget({
   required labelText,

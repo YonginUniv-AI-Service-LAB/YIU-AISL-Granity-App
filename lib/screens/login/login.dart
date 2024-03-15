@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:granity/colors.dart';
 import 'package:granity/widgets/BaseAppBar.dart';
 import 'package:granity/widgets/textInputWidgets/userInfoTextInput.dart';
+import 'package:granity/design/colors.dart';
 
 class LoginScreen extends StatelessWidget {
   final emailController = TextEditingController();
@@ -20,7 +20,8 @@ class LoginScreen extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(60, 30, 60, 30),
               child: Column(children: [
                 UserInfoTextInputWidget(labelText: "학번", hintText: "학번을 입력하세요"),
-                UserInfoTextInputWidget(labelText: "비밀번호", hintText: "비밀번호를 입력하세요")
+                UserInfoTextInputWidget(
+                    labelText: "비밀번호", hintText: "비밀번호를 입력하세요")
               ]),
             )));
   }
