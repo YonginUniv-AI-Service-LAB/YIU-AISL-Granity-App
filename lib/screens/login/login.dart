@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:granity/colors.dart';
+import 'package:granity/widgets/BaseAppBar.dart';
+import 'package:granity/widgets/textInputWidgets/userInfoTextInput.dart';
 
 class LoginScreen extends StatelessWidget {
   final emailController = TextEditingController();
@@ -9,24 +11,18 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-    return Scaffold(
-        appBar: AppBar(
-          title: const Text('로그인'),
-          backgroundColor: ColorStyles.appMainColor,
-        ),
-        body: Container(
-          color: Colors.white,
-          child: const Column(children: [
-            TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                enabledBorder: UnderlineInputBorder(),
-                labelText: "학번",
-              ),
-            )
-          ]),
-        ));
+    return GestureDetector(
+        onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
+        child: Scaffold(
+            appBar: BaseAppBar(appBar: AppBar(), title: "로그인", center: true),
+            body: Container(
+              color: Colors.white,
+              padding: const EdgeInsets.fromLTRB(60, 30, 60, 30),
+              child: Column(children: [
+                UserInfoTextInputWidget(labelText: "학번", hintText: "학번을 입력하세요"),
+                UserInfoTextInputWidget(labelText: "비밀번호", hintText: "비밀번호를 입력하세요")
+              ]),
+            )));
   }
 
   void login(
