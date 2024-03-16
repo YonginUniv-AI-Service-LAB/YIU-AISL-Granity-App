@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:granity/widgets/BaseAppBar.dart';
-import 'package:granity/widgets/textInputWidgets/userInfoTextInput.dart';
+import 'package:granity/widgets/textFieldWidgets/userInfoTextField.dart';
 import 'package:granity/design/colors.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -19,9 +19,23 @@ class LoginScreen extends StatelessWidget {
               color: Colors.white,
               padding: const EdgeInsets.fromLTRB(60, 30, 60, 30),
               child: Column(children: [
-                UserInfoTextInputWidget(labelText: "학번", hintText: "학번을 입력하세요"),
-                UserInfoTextInputWidget(
-                    labelText: "비밀번호", hintText: "비밀번호를 입력하세요")
+                UserInfoTextFieldWidget(
+                    labelText: "학번", hintText: "학번을 입력하세요", obscureText: false),
+                UserInfoTextFieldWidget(
+                    labelText: "비밀번호",
+                    hintText: "비밀번호를 입력하세요",
+                    obscureText: true),
+                ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll<Color>(
+                        ColorStyles.appMainColor),
+                  ),
+                  onPressed: null,
+                  child: const Text(
+                    '회원가입',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
               ]),
             )));
   }

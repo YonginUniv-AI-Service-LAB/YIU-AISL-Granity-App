@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:granity/design/colors.dart';
 
-Container UserInfoTextInputWidget({
+// 회원가입, 로그인 등 유저의 정보를 입력받는 TextField
+Container UserInfoTextFieldWidget({
   required labelText,
   required hintText,
+  required obscureText
   // required Function(int) onClick,
 }) {
   return Container(
@@ -13,7 +15,7 @@ Container UserInfoTextInputWidget({
             fontSize: 18,
             color: ColorStyles.textBlackColor,
             fontWeight: FontWeight.bold),
-        // obscureText: true,
+        obscureText: obscureText,
         enabled: true,
         decoration: InputDecoration(
             enabledBorder: UnderlineInputBorder(
