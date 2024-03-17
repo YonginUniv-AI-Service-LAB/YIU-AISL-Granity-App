@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:granity/design/colors.dart';
 
-// 회원가입, 로그인 등 유저의 정보를 입력받는 TextField
+// 섹션 타이틀 그룹 - 제목, 부제목(설명)
 Container DefaultSectionTitleWidget(
     {required title,
     required subtitle,

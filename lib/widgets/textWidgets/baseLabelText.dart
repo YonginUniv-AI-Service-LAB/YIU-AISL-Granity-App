@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:granity/design/colors.dart';
 
-// 회원가입, 로그인 등 유저의 정보를 입력받는 TextField
+// 기본 라벨 ex) 회원가입 텍스트필드 라벨
 Container BaseLabelTextWidget({
     required title
     // required Function(int) onClick,

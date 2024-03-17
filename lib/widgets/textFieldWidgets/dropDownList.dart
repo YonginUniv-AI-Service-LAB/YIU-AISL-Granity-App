@@ -3,12 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:granity/design/colors.dart';
 import 'package:granity/widgets/textWidgets/baseLabelText.dart';
 
-const List<String> _list = [
-  'Developer',
-  'Designer',
-  'Consultant',
-  'Student',
-];
 
 // 라벨 + 드롭다운 리스트 선택 ex) 회원가입 - 전공 선택
 Container DropDownListWidget(

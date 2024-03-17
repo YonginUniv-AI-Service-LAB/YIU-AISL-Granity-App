@@ -25,17 +25,6 @@ class JoinScreen extends StatefulWidget {
   State<JoinScreen> createState() => _JoinScreenState();
 }
 
-const List<String> _list = [
-  'Developer',
-  'Designer',
-  'Consultant',
-  'Student',
-  'Developer',
-  'Designer',
-  'Consultant',
-  'Student',
-];
-
 class _JoinScreenState extends State<JoinScreen> {
   String dropdownValue = list.first;
 

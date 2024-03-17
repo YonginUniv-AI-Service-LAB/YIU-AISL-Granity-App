@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// 기본 앱바 스타일
 class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   final AppBar appBar;
   final String title;

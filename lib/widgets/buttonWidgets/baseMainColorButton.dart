@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:granity/design/colors.dart';
 
-// 회원가입, 로그인 등 유저의 정보를 입력받는 TextField
+// 가로로 긴 기본 버튼 ex) 회원가입, 로그인
 Container BaseMainColorButtonWidget({
   required title,
   // required Function(int) onClick,
