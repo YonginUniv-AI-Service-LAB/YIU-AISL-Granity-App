@@ -9,7 +9,7 @@ Container UserInfoTextFieldWidget({
   // required Function(int) onClick,
 }) {
   return Container(
-    margin: EdgeInsets.only(bottom: 15),
+    margin: EdgeInsets.only(bottom: 10),
     child: TextField(
         style: TextStyle(
             fontSize: 18,

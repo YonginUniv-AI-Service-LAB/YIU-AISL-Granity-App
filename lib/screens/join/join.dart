@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'package:animated_custom_dropdown/custom_dropdown.dart';
+import 'package:granity/data/userInfo.dart';
 import 'package:granity/widgets/BaseAppBar.dart';
+import 'package:granity/widgets/buttonWidgets/baseMainColorButton.dart';
+import 'package:granity/widgets/groupWidgets/defaultSectionTitle.dart';
+import 'package:granity/widgets/textFieldWidgets/dropDownList.dart';
+import 'package:granity/widgets/textFieldWidgets/textFieldButton.dart';
 import 'package:granity/widgets/textFieldWidgets/userInfoTextField.dart';
 
 import 'package:granity/design/colors.dart';
@@ -25,6 +30,10 @@ const List<String> _list = [
   'Designer',
   'Consultant',
   'Student',
+  'Developer',
+  'Designer',
+  'Consultant',
+  'Student',
 ];
 
 class _JoinScreenState extends State<JoinScreen> {
@@ -39,78 +48,105 @@ class _JoinScreenState extends State<JoinScreen> {
             body: Container(
               color: Colors.white,
               padding: const EdgeInsets.fromLTRB(50, 30, 50, 30),
-              child: Column(children: [
-                UserInfoTextFieldWidget(
-                    labelText: "학번", hintText: "학번을 입력하세요", obscureText: false),
-                UserInfoTextFieldWidget(
-                    labelText: "비밀번호",
-                    hintText: "비밀번호를 입력하세요",
-                    obscureText: true),
-                UserInfoTextFieldWidget(
-                    labelText: "이름", hintText: "이름을 입력하세요", obscureText: false),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    BaseLabelTextWidget(title: '전공1'),
-                    CustomDropdown<String>(
-                      hintText: '전공을 선택하세요',
-                      items: _list,
-                      // initialItem: _list[0],
-                      onChanged: (value) {
-                        print('changing value to: $value');
-                      },
-                    ),
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: const Size(double.infinity, 50),
-                        // 글자 배경색 설정
-                        backgroundColor: ColorStyles.appMainColor,
-                        // 글자 색상 및 애니메이션 색 설정
-                        foregroundColor: Colors.white,
-                        // 글자 그림자 설정
-                        shadowColor: ColorStyles.appSubColor,
-                        // 글자 3D 입체감 높이
-                        elevation: 5.0,
-                        textStyle: const TextStyle(
-                          fontFamily: "Pretendard",
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20.0,
-                        ),
-                        padding: const EdgeInsets.all(10.0),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.0)),
-                      ),
-                      child: const Text('회원가입'),
-                    ),
-                  ],
-                )
-                // DropdownButton<String>(
-                //   value: dropdownValue,
-                //   elevation: 0,
-                //   style: const TextStyle(color: Colors.deepPurple),
-                //   focusColor: ColorStyles.appMainColor,
-                //   underline: Container(
-                //     height: 1,
-                //     color: ColorStyles.textDisableColor
-                //   ),
-                //   onChanged: (String? value) {
-                //     // This is called when the user selects an item.
-                //     setState(() {
-                //       dropdownValue = value!;
-                //     });
-                //   },
-                //   items: majorList.map<DropdownMenuItem<String>>((major, code) => {
-                //     return DropdownMenuItem<String> (child: Text(major), value: code,);
-                //   })
-                //   // list.map<DropdownMenuItem<String>>((String value) {
-                //   //   return DropdownMenuItem<String>(
-                //   //     value: value,
-                //   //     child: Text(value),
-                //   //   );
-                //   // }).toList(),
-                // )
-              ]),
+              margin: const EdgeInsets.only(bottom: 30),
+              child: SingleChildScrollView(
+                child: Column(children: [
+                  // 기본정보 입력 섹션
+                  Container(
+                    margin: const EdgeInsets.only(bottom: 50),
+                    child: Column(children: [
+                      DefaultSectionTitleWidget(
+                          title: '기본정보',
+                          subtitle:
+                              '- 학교 이메일은 @yiu.ac.kr를 제외하고 입력\n- 학교 이메일 입력 후 이메일 인증 진행 필수\n- 이름은 학교에 등록된 본명을 입력\n- 비밀번호는 영문자+특수문자+숫자 포함 8자리 이상 입력',
+                          titleColor: ColorStyles.textBlackColor,
+                          subtitleColor: ColorStyles.textBodyColor),
+                      TextFieldButtonWidget(
+                          labelText: '학교 이메일',
+                          hintText: "ex) 202433001",
+                          buttonText: '인증번호 전송',
+                          onPressed: () {}),
+                          TextFieldButtonWidget(
+                          labelText: '인증번호',
+                          hintText: "인증번호 입력",
+                          buttonText: '인증번호 확인',
+                          onPressed: () {}),
+                      UserInfoTextFieldWidget(
+                          labelText: "이름",
+                          hintText: "이름(본명) 입력",
+                          obscureText: false),
+                      UserInfoTextFieldWidget(
+                          labelText: "비밀번호",
+                          hintText: "영문자+특수문자+숫자 포함 8자리 이상",
+                          obscureText: true),
+                    ]),
+                  ),
+
+                  // 학적 입력 섹션
+                  Container(
+                    margin: const EdgeInsets.only(bottom: 50),
+                    child: Column(children: [
+                      DefaultSectionTitleWidget(
+                          title: '학적',
+                          subtitle:
+                              '- 학생은 학년과 현재 학적 상태를 정확하게 선택\n- 교수 및 직원은 해당없음을 선택',
+                          titleColor: ColorStyles.textBlackColor,
+                          subtitleColor: ColorStyles.textBodyColor),
+                      DropDownListWidget(
+                          margin: const EdgeInsets.only(bottom: 15),
+                          items: userRole.keys.toList(),
+                          hintText: '구분',
+                          initialItem: '학생',
+                          onChanged: () {}),
+                      DropDownListWidget(
+                          margin: const EdgeInsets.only(bottom: 15),
+                          items: userGradeList,
+                          hintText: '학년',
+                          initialItem: null,
+                          onChanged: () {}),
+                      DropDownListWidget(
+                          margin: const EdgeInsets.only(bottom: 15),
+                          items: userStatus.keys.toList(),
+                          hintText: '학적 상태',
+                          initialItem: null,
+                          onChanged: () {}),
+                    ]),
+                  ),
+
+                  // 전공 입력 섹션
+                  Container(
+                    margin: const EdgeInsets.only(bottom: 50),
+                    child: Column(children: [
+                      DefaultSectionTitleWidget(
+                          title: '전공',
+                          subtitle:
+                              '- 단일전공 학생은 전공1만 선택, 전공2와 전공3은 해당없음을 선택\n- 복수전공, 부전공 학생은 전공2와 전공3을 선택\nex) 주전공+부전공 학생은 전공1에 주전공, 전공2에 부전공 선택',
+                          titleColor: ColorStyles.textBlackColor,
+                          subtitleColor: ColorStyles.textBodyColor),
+                      DropDownListWidget(
+                          margin: const EdgeInsets.only(bottom: 15),
+                          items: majorList.keys.toList(),
+                          hintText: '전공1',
+                          initialItem: null,
+                          onChanged: () {}),
+                      DropDownListWidget(
+                          margin: const EdgeInsets.only(bottom: 15),
+                          items: majorListIncludeNot.keys.toList(),
+                          hintText: '전공2',
+                          initialItem: majorListIncludeNot.keys.first,
+                          onChanged: () {}),
+                      DropDownListWidget(
+                          margin: const EdgeInsets.only(bottom: 15),
+                          items: majorListIncludeNot.keys.toList(),
+                          hintText: '전공3',
+                          initialItem: majorListIncludeNot.keys.first,
+                          onChanged: () {}),
+                    ]),
+                  ),
+
+                  BaseMainColorButtonWidget(title: '회원가입')
+                ]),
+              ),
             )));
   }
 
