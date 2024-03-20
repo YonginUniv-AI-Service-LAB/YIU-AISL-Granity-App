@@ -55,7 +55,7 @@ class _JoinScreenState extends State<JoinScreen> {
                           hintText: "ex) 202433001",
                           buttonText: '인증번호 전송',
                           onPressed: () {}),
-                          TextFieldButtonWidget(
+                      TextFieldButtonWidget(
                           labelText: '인증번호',
                           hintText: "인증번호 입력",
                           buttonText: '인증번호 확인',
