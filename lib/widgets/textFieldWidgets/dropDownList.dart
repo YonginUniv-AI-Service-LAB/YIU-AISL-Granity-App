@@ -1,12 +1,14 @@
 import 'package:animated_custom_dropdown/custom_dropdown.dart';
 import 'package:flutter/material.dart';
 import 'package:granity/design/colors.dart';
-import 'package:granity/widgets/textWidgets/baseLabelText.dart';
-
 
 // 라벨 + 드롭다운 리스트 선택 ex) 회원가입 - 전공 선택
 Container DropDownListWidget(
-    {required items, required hintText, required initialItem, required onChanged, required margin
+    {required items,
+    required hintText,
+    required initialItem,
+    required onChanged,
+    required margin
     // required Function(int) onClick,
     }) {
   return Container(
