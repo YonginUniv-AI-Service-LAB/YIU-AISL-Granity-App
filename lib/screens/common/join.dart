@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
-
-import 'package:animated_custom_dropdown/custom_dropdown.dart';
+import 'package:granity/data/majorList.dart';
 import 'package:granity/data/userInfo.dart';
+import 'package:granity/design/colors.dart';
 import 'package:granity/widgets/BaseAppBar.dart';
-import 'package:granity/widgets/buttonWidgets/baseMainColorButton.dart';
+import 'package:granity/widgets/buttonWidgets/main_color_button.dart';
 import 'package:granity/widgets/groupWidgets/defaultSectionTitle.dart';
 import 'package:granity/widgets/textFieldWidgets/dropDownList.dart';
 import 'package:granity/widgets/textFieldWidgets/textFieldButton.dart';
 import 'package:granity/widgets/textFieldWidgets/userInfoTextField.dart';
-
-import 'package:granity/design/colors.dart';
-import 'package:granity/data/majorList.dart';
-import 'package:granity/widgets/textWidgets/baseLabelText.dart';
 
 const List<String> list = <String>['One', 'Two', 'Three', 'Four'];
 
@@ -133,7 +129,7 @@ class _JoinScreenState extends State<JoinScreen> {
                     ]),
                   ),
 
-                  BaseMainColorButtonWidget(title: '회원가입')
+                  MainColorButtonWidget(title: '회원가입')
                 ]),
               ),
             )));

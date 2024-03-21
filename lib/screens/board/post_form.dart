@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+import 'package:granity/widgets/BaseAppBar.dart';
+import 'package:granity/widgets/buttonWidgets/main_color_button.dart';
+
+const List<String> list = <String>['One', 'Two', 'Three', 'Four'];
+
+class PostFormScreen extends StatefulWidget {
+  final emailController = TextEditingController();
+  final pwdController = TextEditingController();
+
+  PostFormScreen({super.key});
+
+  @override
+  State<PostFormScreen> createState() => _PostFormScreenState();
+}
+
+class _PostFormScreenState extends State<PostFormScreen> {
+  String dropdownValue = list.first;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+        onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
+        child: Scaffold(
+            appBar: BaseAppBar(appBar: AppBar(), title: "게시글", center: true),
+            body: Container(
+              color: Colors.white,
+              padding: const EdgeInsets.fromLTRB(50, 30, 50, 30),
+              margin: const EdgeInsets.only(bottom: 30),
+              child: SingleChildScrollView(
+                child: Column(children: [MainColorButtonWidget(title: '게시글')]),
+              ),
+            )));
+  }
+}

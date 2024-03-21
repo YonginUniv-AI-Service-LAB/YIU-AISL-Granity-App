@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:granity/design/colors.dart';
 
 // 가로로 긴 기본 버튼 ex) 회원가입, 로그인
-Container BaseMainColorButtonWidget({
+Container MainColorButtonWidget({
   required title,
   // required Function(int) onClick,
 }) {
