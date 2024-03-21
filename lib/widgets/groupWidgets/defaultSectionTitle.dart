@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:granity/design/colors.dart';
 
 // 섹션 타이틀 그룹 - 제목, 부제목(설명)
 Container DefaultSectionTitleWidget(
@@ -10,7 +11,7 @@ Container DefaultSectionTitleWidget(
     }) {
   return Container(
     width: double.infinity,
-    margin: const EdgeInsets.only(bottom: 20),
+    margin: EdgeInsets.only(bottom: 20),
     child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,

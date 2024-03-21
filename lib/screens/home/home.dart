@@ -11,12 +11,12 @@ class HomeScreen extends StatelessWidget {
         title: const Text('홈'),
       ),
       bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
+        type: BottomNavigationBarType.fixed,
           selectedItemColor: ColorStyles.appMainColor,
           unselectedItemColor: ColorStyles.textBodyColor,
-          unselectedLabelStyle: const TextStyle(fontFamily: 'Pretendard'),
-          selectedLabelStyle: const TextStyle(
-              fontWeight: FontWeight.bold, fontFamily: 'Pretendard'),
+
+          unselectedLabelStyle: TextStyle(fontFamily: 'Pretendard'),
+          selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Pretendard'),
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
