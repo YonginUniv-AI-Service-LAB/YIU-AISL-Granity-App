@@ -29,7 +29,7 @@ class _PostListScreenState extends State<PostListScreen> {
               margin: const EdgeInsets.only(bottom: 30),
               child: SingleChildScrollView(
                 child:
-                    Column(children: [MainColorButtonWidget(title: '나의 게시글')]),
+                    Column(children: [MainColorButtonWidget(title: '나의 게시글', onPressed: () => {print('로그인')})]),
               ),
             )));
   }

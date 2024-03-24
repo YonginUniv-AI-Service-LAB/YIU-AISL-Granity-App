@@ -28,7 +28,7 @@ class _CurriculumListScreenState extends State<CurriculumListScreen> {
               padding: const EdgeInsets.fromLTRB(50, 30, 50, 30),
               margin: const EdgeInsets.only(bottom: 30),
               child: SingleChildScrollView(
-                child: Column(children: [MainColorButtonWidget(title: '커리큘럼')]),
+                child: Column(children: [MainColorButtonWidget(title: '커리큘럼', onPressed: () => {print('로그인')})]),
               ),
             )));
   }

@@ -29,7 +29,7 @@ class _MessageFormScreenState extends State<MessageFormScreen> {
               margin: const EdgeInsets.only(bottom: 30),
               child: SingleChildScrollView(
                 child:
-                    Column(children: [MainColorButtonWidget(title: '쪽지 보내기')]),
+                    Column(children: [MainColorButtonWidget(title: '쪽지 보내기', onPressed: () => {print('로그인')})]),
               ),
             )));
   }

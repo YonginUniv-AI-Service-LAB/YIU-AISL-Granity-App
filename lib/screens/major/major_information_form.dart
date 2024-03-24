@@ -32,7 +32,7 @@ class _MajorInformationFormScreenState
               margin: const EdgeInsets.only(bottom: 30),
               child: SingleChildScrollView(
                 child: Column(
-                    children: [MainColorButtonWidget(title: '학과 정보 수정')]),
+                    children: [MainColorButtonWidget(title: '학과 정보 수정', onPressed: () => {print('로그인')})]),
               ),
             )));
   }

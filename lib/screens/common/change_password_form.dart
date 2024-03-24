@@ -31,7 +31,7 @@ class _ChangePasswordFormScreenState extends State<ChangePasswordFormScreen> {
               margin: const EdgeInsets.only(bottom: 30),
               child: SingleChildScrollView(
                 child:
-                    Column(children: [MainColorButtonWidget(title: '비밀번호 변경')]),
+                    Column(children: [MainColorButtonWidget(title: '비밀번호 변경', onPressed: () => {print('비밀번호 변경')})]),
               ),
             )));
   }

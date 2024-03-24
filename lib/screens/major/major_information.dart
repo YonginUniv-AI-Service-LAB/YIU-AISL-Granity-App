@@ -29,7 +29,7 @@ class _MajorInformationScreenState extends State<MajorInformationScreen> {
               margin: const EdgeInsets.only(bottom: 30),
               child: SingleChildScrollView(
                 child:
-                    Column(children: [MainColorButtonWidget(title: '학과 소개')]),
+                    Column(children: [MainColorButtonWidget(title: '학과 소개', onPressed: () => {print('로그인')})]),
               ),
             )));
   }

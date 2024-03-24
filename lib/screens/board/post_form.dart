@@ -28,7 +28,10 @@ class _PostFormScreenState extends State<PostFormScreen> {
               padding: const EdgeInsets.fromLTRB(50, 30, 50, 30),
               margin: const EdgeInsets.only(bottom: 30),
               child: SingleChildScrollView(
-                child: Column(children: [MainColorButtonWidget(title: '게시글')]),
+                child: Column(children: [
+                  MainColorButtonWidget(
+                      title: '게시글', onPressed: () => {print('게시글')})
+                ]),
               ),
             )));
   }

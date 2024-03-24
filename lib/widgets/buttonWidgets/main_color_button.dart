@@ -4,11 +4,11 @@ import 'package:granity/design/colors.dart';
 // 가로로 긴 기본 버튼 ex) 회원가입, 로그인
 Container MainColorButtonWidget({
   required title,
-  // required Function(int) onClick,
+  required Function() onPressed,
 }) {
   return Container(
     child: ElevatedButton(
-      onPressed: () {},
+      onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         minimumSize: const Size(double.infinity, 50),
         // 글자 배경색 설정

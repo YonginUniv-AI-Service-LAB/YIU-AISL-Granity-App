@@ -129,7 +129,7 @@ class _JoinScreenState extends State<JoinScreen> {
                     ]),
                   ),
 
-                  MainColorButtonWidget(title: '회원가입')
+                  MainColorButtonWidget(title: '회원가입', onPressed: () => {print('회원가입')})
                 ]),
               ),
             )));

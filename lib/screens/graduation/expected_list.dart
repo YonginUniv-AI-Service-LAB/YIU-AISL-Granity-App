@@ -29,7 +29,7 @@ class _ExpectedListScreenState extends State<ExpectedListScreen> {
               margin: const EdgeInsets.only(bottom: 30),
               child: SingleChildScrollView(
                 child:
-                    Column(children: [MainColorButtonWidget(title: '졸업예정자')]),
+                    Column(children: [MainColorButtonWidget(title: '졸업예정자', onPressed: () => {print('로그인')})]),
               ),
             )));
   }

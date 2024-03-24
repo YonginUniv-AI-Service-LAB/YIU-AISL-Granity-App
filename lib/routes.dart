@@ -3,6 +3,7 @@ import 'package:granity/screens/board/board.dart';
 import 'package:granity/screens/board/post_detail.dart';
 import 'package:granity/screens/board/post_form.dart';
 import 'package:granity/screens/common/change_password_form.dart';
+import 'package:granity/screens/common/join.dart';
 import 'package:granity/screens/common/login.dart';
 import 'package:granity/screens/faq/faq_detail.dart';
 import 'package:granity/screens/faq/faq_form.dart';
@@ -15,7 +16,6 @@ import 'package:granity/screens/graduation/requirement_form.dart';
 import 'package:granity/screens/graduation/requirement_list.dart';
 // common
 import 'package:granity/screens/home/home.dart';
-import 'package:granity/screens/join/join.dart';
 import 'package:granity/screens/major/curriculum_form.dart';
 import 'package:granity/screens/major/curriculum_list.dart';
 import 'package:granity/screens/major/lab_form.dart';
@@ -334,10 +334,10 @@ import 'package:granity/screens/user/user_information.dart';
 // );
 
 final GoRouter routes = GoRouter(
-  // initialLocation: '/',
+  initialLocation: '/login',
   routes: [
     // common
-    GoRoute(path: '/', builder: (context, state) => HomeScreen()),
+    GoRoute(path: '/', builder: (context, state) => const HomeScreen()),
     GoRoute(path: '/join', builder: (context, state) => JoinScreen()),
     GoRoute(path: '/login', builder: (context, state) => LoginScreen()),
     GoRoute(
