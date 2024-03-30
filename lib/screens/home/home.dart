@@ -44,10 +44,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         unselectedItemColor: ColorStyles.textBodyColor,
         selectedLabelStyle: const TextStyle(
           fontWeight: FontWeight.bold,
-          fontSize: 10,
+          fontSize: 13,
         ),
         unselectedLabelStyle: const TextStyle(
-          fontSize: 10,
+          fontSize: 13,
         ),
         type: BottomNavigationBarType.fixed,
         onTap: (int index) {

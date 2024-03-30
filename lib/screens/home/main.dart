@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:granity/design/colors.dart';
-import 'package:granity/widgets/BaseAppBar.dart';
 
 const List<String> list = <String>['One', 'Two', 'Three', 'Four'];
 

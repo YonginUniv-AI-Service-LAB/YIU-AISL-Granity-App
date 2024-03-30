@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:granity/widgets/BaseAppBar.dart';
-import 'package:granity/widgets/buttonWidgets/main_color_button.dart';
 
 const List<String> list = <String>['One', 'Two', 'Three', 'Four'];
 
@@ -27,8 +26,18 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
               color: Colors.white,
               padding: const EdgeInsets.fromLTRB(50, 30, 50, 30),
               margin: const EdgeInsets.only(bottom: 30),
-              child: SingleChildScrollView(
-                child: Column(children: [MainColorButtonWidget(title: '내 정보', onPressed: () => {print('로그인')})]),
+              child: const SingleChildScrollView(
+                child: Column(children: [
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.favorite,
+                        color: Colors.pink,
+                        size: 50.0,
+                      )
+                    ],
+                  )
+                ]),
               ),
             )));
   }

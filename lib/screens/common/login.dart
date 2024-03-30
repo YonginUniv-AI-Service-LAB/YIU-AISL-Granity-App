@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:granity/widgets/buttonWidgets/main_color_button.dart';
 import 'package:granity/widgets/buttonWidgets/main_color_outlined_button.dart';
-import 'package:granity/widgets/buttonWidgets/underlineTextButton.dart';
-import 'package:granity/widgets/textFieldWidgets/userInfoTextField.dart';
-import 'package:granity/widgets/textWidgets/granitySymbol.dart';
+import 'package:granity/widgets/buttonWidgets/underline_text_button.dart';
+import 'package:granity/widgets/textFieldWidgets/user_info_text_field.dart';
+import 'package:granity/widgets/textWidgets/granity_symbol.dart';
 
 class LoginScreen extends StatelessWidget {
-  final emailController = TextEditingController();
+  final idController = TextEditingController();
   final pwdController = TextEditingController();
 
   LoginScreen({super.key});
@@ -38,18 +38,20 @@ class LoginScreen extends StatelessWidget {
                       UserInfoTextFieldWidget(
                           labelText: "학교 이메일",
                           hintText: "ex) 202433001, wjlee",
-                          obscureText: false),
+                          obscureText: false,
+                          controller: idController),
                       UserInfoTextFieldWidget(
                           labelText: "비밀번호",
                           hintText: "비밀번호 입력",
-                          obscureText: true),
+                          obscureText: true,
+                          controller: pwdController),
                     ]),
                   ),
                   Container(
                     margin: const EdgeInsets.only(bottom: 10),
                     child: MainColorButtonWidget(
                       title: "로그인",
-                      onPressed: () => print('로그인'),
+                      onPressed: () => {context.replace('/')},
                     ),
                   ),
                   UnderLineTextButtonWidget(

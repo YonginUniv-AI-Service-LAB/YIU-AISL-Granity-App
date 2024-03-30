@@ -25,9 +25,10 @@ Container DropDownListWidget(
       items: items,
       initialItem: initialItem,
       onChanged: (value) {
-        print('changing value to: $value');
+        onChanged(value);
         // print(majorList[value]);
       },
+      searchHintText: "검색",
     ),
   );
 }
