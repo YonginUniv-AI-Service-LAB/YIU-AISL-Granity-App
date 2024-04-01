@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
-import 'dart:convert';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:meta/meta.dart';
 
 @immutable
 class User {
@@ -30,32 +29,31 @@ class User {
       required this.status,
       required this.fcm});
 
-  factory User.fromJson(Map<String, dynamic> json) =>  User(
-        id: json['id'],
-        name: json['name'],
-        pwd: json['pwd'],
-        major_id1: json['major_id1'],
-        major_id2: json['major_id2'],
-        major_id3: json['major_id3'],
-        grade: json['grade'],
-        role: json['role'],
-        status: json['status'],
-        fcm: json['fcm']
-        );
+  factory User.fromJson(Map<String, dynamic> json) => User(
+      id: json['id'],
+      name: json['name'],
+      pwd: json['pwd'],
+      major_id1: json['major_id1'],
+      major_id2: json['major_id2'],
+      major_id3: json['major_id3'],
+      grade: json['grade'],
+      role: json['role'],
+      status: json['status'],
+      fcm: json['fcm']);
 
   Map<String, dynamic> toJson() => {
-            "id": id,
-            "name": name,
-            "pwd": pwd,
-            "major_id1": major_id1,
-            "major_id2": major_id2,
-            "major_id3": major_id3,
-            "grade": grade,
-            "role": role,
-            "status": status,
-            "fcm": fcm
-          };
-  }
+        "id": id,
+        "name": name,
+        "pwd": pwd,
+        "major_id1": major_id1,
+        "major_id2": major_id2,
+        "major_id3": major_id3,
+        "grade": grade,
+        "role": role,
+        "status": status,
+        "fcm": fcm
+      };
+}
 
 //   User copyWith(
 //       {String? id,

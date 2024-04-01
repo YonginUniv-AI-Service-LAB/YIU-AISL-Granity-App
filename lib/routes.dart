@@ -29,6 +29,12 @@ import 'package:granity/screens/major/student_council.dart';
 import 'package:granity/screens/major/student_list.dart';
 import 'package:granity/screens/message/message_form.dart';
 import 'package:granity/screens/message/message_list.dart';
+import 'package:granity/screens/notice/notice_detail.dart';
+import 'package:granity/screens/notice/notice_form.dart';
+import 'package:granity/screens/notice/notice_list.dart';
+import 'package:granity/screens/test/basic_listView.dart';
+import 'package:granity/screens/test/custom_listView.dart';
+import 'package:granity/screens/test/error_listView.dart';
 import 'package:granity/screens/user/comment_list.dart';
 import 'package:granity/screens/user/post_list.dart';
 import 'package:granity/screens/user/push_list.dart';
@@ -338,7 +344,7 @@ final GoRouter routes = GoRouter(
   routes: [
     // common
     GoRoute(path: '/', builder: (context, state) => const HomeScreen()),
-    GoRoute(path: '/join', builder: (context, state) => JoinScreen()),
+    GoRoute(path: '/join', builder: (context, state) => const JoinScreen()),
     GoRoute(path: '/login', builder: (context, state) => LoginScreen()),
     GoRoute(
         path: '/change/password',
@@ -417,13 +423,13 @@ final GoRouter routes = GoRouter(
 
     // notice
     GoRoute(
-        path: '/notice', builder: (context, state) => ProfessorListScreen()),
+        path: '/notice', builder: (context, state) => const NoticeListScreen()),
     GoRoute(
         path: '/notice/detail',
-        builder: (context, state) => ProfessorDetailScreen()),
+        builder: (context, state) =>
+            NoticeDetailScreen(notice: state.extra as dynamic)),
     GoRoute(
-        path: '/notice/form',
-        builder: (context, state) => ProfessorFormScreen()),
+        path: '/notice/form', builder: (context, state) => NoticeFormScreen()),
 
     // faq
     GoRoute(path: '/faq', builder: (context, state) => FaqListScreen()),
@@ -436,5 +442,14 @@ final GoRouter routes = GoRouter(
     GoRoute(
         path: '/message/form',
         builder: (context, state) => MessageFormScreen()),
+    GoRoute(
+        path: '/test/listview/basic',
+        builder: (context, state) => const TestBasicListViewScreen()),
+    GoRoute(
+        path: '/test/listview/error',
+        builder: (context, state) => const TestErrorListViewScreen()),
+    GoRoute(
+        path: '/test/listview/custom',
+        builder: (context, state) => const TestCustomListViewScreen()),
   ],
 );

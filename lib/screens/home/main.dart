@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:granity/design/colors.dart';
+import 'package:granity/widgets/buttonWidgets/main_color_button.dart';
 
 const List<String> list = <String>['One', 'Two', 'Three', 'Four'];
 
@@ -30,20 +30,30 @@ class _MainScreenState extends State<MainScreen> {
             margin: const EdgeInsets.only(bottom: 30),
             child: SingleChildScrollView(
               child: Column(children: [
-                ElevatedButton(
-                  style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll<Color>(
-                        ColorStyles.appMainColor),
-                  ),
+                MainColorButtonWidget(
+                  title: '공지사항',
                   onPressed: () async {
-                    final result = await context.push('/join');
-                    print(result);
+                    final result = await context.push('/notice');
                   },
-                  child: const Text(
-                    '회원가입',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                )
+                ),
+                MainColorButtonWidget(
+                  title: 'Basic ListView',
+                  onPressed: () async {
+                    final result = await context.push('/test/listview/basic');
+                  },
+                ),
+                MainColorButtonWidget(
+                  title: 'Error ListView',
+                  onPressed: () async {
+                    final result = await context.push('/test/listview/error');
+                  },
+                ),
+                MainColorButtonWidget(
+                  title: 'Custom ListView',
+                  onPressed: () async {
+                    final result = await context.push('/test/listview/custom');
+                  },
+                ),
               ]),
             ),
           ),
