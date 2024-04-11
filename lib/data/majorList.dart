@@ -1,4 +1,4 @@
-// final List majorList = [
+ // final List majorList = [
 //   //무도대학
 //   '유도학과',
 //   '유도경기지도학과'

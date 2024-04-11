@@ -37,21 +37,21 @@ class _MainScreenState extends State<MainScreen> {
                   },
                 ),
                 MainColorButtonWidget(
-                  title: 'Basic ListView',
+                  title: '학과 정보',
                   onPressed: () async {
-                    final result = await context.push('/test/listview/basic');
+                    final result = await context.push('/major');
                   },
                 ),
                 MainColorButtonWidget(
-                  title: 'Error ListView',
+                  title: '나의 졸업 요건',
                   onPressed: () async {
-                    final result = await context.push('/test/listview/error');
+                    final result = await context.push('/major');
                   },
                 ),
                 MainColorButtonWidget(
-                  title: 'Custom ListView',
+                  title: '게시판',
                   onPressed: () async {
-                    final result = await context.push('/test/listview/custom');
+                    final result = await context.push('/board');
                   },
                 ),
               ]),
@@ -60,3 +60,23 @@ class _MainScreenState extends State<MainScreen> {
         )));
   }
 }
+
+
+// MainColorButtonWidget(
+//                   title: 'Basic ListView',
+//                   onPressed: () async {
+//                     final result = await context.push('/test/listview/basic');
+//                   },
+//                 ),
+//                 MainColorButtonWidget(
+//                   title: 'Error ListView',
+//                   onPressed: () async {
+//                     final result = await context.push('/test/listview/error');
+//                   },
+//                 ),
+//                 MainColorButtonWidget(
+//                   title: 'Custom ListView',
+//                   onPressed: () async {
+//                     final result = await context.push('/test/listview/custom');
+//                   },
+//                 ),

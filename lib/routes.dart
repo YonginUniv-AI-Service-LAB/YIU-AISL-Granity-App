@@ -359,7 +359,7 @@ final GoRouter routes = GoRouter(
 
     // graduation
     GoRoute(
-        path: '/graduation:',
+        path: '/graduation',
         name: "졸업",
         builder: (context, state) => MyGraduationScreen()),
     GoRoute(
@@ -389,7 +389,8 @@ final GoRouter routes = GoRouter(
 
     // major
     GoRoute(
-        path: '/major', builder: (context, state) => MajorInformationScreen()),
+        path: '/major',
+        builder: (context, state) => const MajorInformationScreen()),
     GoRoute(
         path: '/major/form',
         builder: (context, state) => MajorInformationFormScreen()),

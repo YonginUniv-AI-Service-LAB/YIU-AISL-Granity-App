@@ -83,7 +83,7 @@ Widget listview_separated() {
       );
     },
     separatorBuilder: (BuildContext context, int index) => const Divider(
-      height: 10.0,
+      height: 20.0,
       color: Colors.blue,
     ),
   );
@@ -96,7 +96,7 @@ Widget gridview_basic() {
     padding: const EdgeInsets.all(20),
     crossAxisSpacing: 10,
     mainAxisSpacing: 10,
-    crossAxisCount: 2,
+    crossAxisCount: 5,
     children: <Widget>[
       Container(
         padding: const EdgeInsets.all(8),

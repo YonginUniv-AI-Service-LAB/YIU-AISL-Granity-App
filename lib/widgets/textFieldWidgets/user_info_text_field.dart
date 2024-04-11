@@ -3,7 +3,10 @@ import 'package:granity/design/colors.dart';
 
 // 회원가입, 로그인 등 유저의 정보를 입력받는 TextField
 Container UserInfoTextFieldWidget(
-    {required labelText, required hintText, required obscureText, required controller
+    {required labelText,
+    required hintText,
+    required obscureText,
+    required controller
     // required Function(int) onClick,
     }) {
   return Container(
