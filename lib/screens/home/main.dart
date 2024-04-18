@@ -54,6 +54,12 @@ class _MainScreenState extends State<MainScreen> {
                     final result = await context.push('/board');
                   },
                 ),
+                MainColorButtonWidget(
+                  title: '리스트뷰 과제',
+                  onPressed: () async {
+                    final result = await context.push('/test/listview/basic');
+                  },
+                ),
               ]),
             ),
           ),

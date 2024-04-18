@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:granity/widgets/BaseAppBar.dart';
+import 'package:granity/widgets/buttonWidgets/main_color_button.dart';
 
 class TestBasicListViewScreen extends StatefulWidget {
   const TestBasicListViewScreen({super.key});
@@ -10,6 +11,7 @@ class TestBasicListViewScreen extends StatefulWidget {
 }
 
 class _TestBasicListViewScreenState extends State<TestBasicListViewScreen> {
+  List<int> numbers = <int>[1, 2, 3, 4, 5, 6, 7];
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -19,13 +21,55 @@ class _TestBasicListViewScreenState extends State<TestBasicListViewScreen> {
                 appBar: AppBar(), title: "Basic ListView", center: true),
             body: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MainColorButtonWidget(
+                  title: '버튼 누르면 순서 바뀜',
+                  onPressed: () {
+                    setState(() {
+                      int num = numbers.removeAt(0); // 첫 번째 요소를 제거 => num에 저장
+                      numbers.add(num); // 제거된 첫 번째 요소 => 리스트 마지막에 추가
+                    });
+                    // final result = await context.push('/test/listview/basic');
+                  },
+                ),
+                Expanded(
+                    child: ListView.builder(
+                        padding: const EdgeInsets.all(8),
+                        itemCount: numbers.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return SizedBox(
+                            width: 500,
+                            height: 50,
+                            child: Center(
+                                child: Text(
+                              ' ${numbers[index]}',
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 30),
+                            )),
+                          );
+                        }))
+              ],
               // children: [Expanded(child: listview_basic())],
               // children: [Expanded(child: listview_builder())],
               // children: [Expanded(child: listview_separated())],
-              children: [Expanded(child: gridview_basic())],
+              // children: [Expanded(child: gridview_basic())],
             )));
   }
 }
+
+// ListView.builder 예시
+// Widget listview_homework() {
+//   return ListView.builder(
+//       padding: const EdgeInsets.all(8),
+//       itemCount: numbers.length,
+//       itemBuilder: (BuildContext context, int index) {
+//         return SizedBox(
+//           width: 500,
+//           height: 50,
+//           child: Center(child: Text(' ${numbers[index]}')),
+//         );
+//       });
+// }
 
 // ListView 기본 사용 예시
 Widget listview_basic() {
