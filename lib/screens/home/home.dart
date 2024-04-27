@@ -40,6 +40,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
         selectedItemColor: ColorStyles.appMainColor,
         unselectedItemColor: ColorStyles.textBodyColor,
         selectedLabelStyle: const TextStyle(

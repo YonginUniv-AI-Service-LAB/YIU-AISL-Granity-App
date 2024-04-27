@@ -3,10 +3,14 @@ import 'package:granity/design/colors.dart';
 
 // 기본 버튼 => 터치했을 때 네모 모양
 Container BaseButtonWidget(
-    {required Function() onPressed, required Widget, padding}) {
+    {required Function() onPressed,
+    required Widget,
+    padding,
+    backgroundColor}) {
   return Container(
       child: TextButton(
           style: ElevatedButton.styleFrom(
+              backgroundColor: backgroundColor,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10)),
               foregroundColor: ColorStyles.textDisableColor,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:granity/design/colors.dart';
@@ -23,6 +24,15 @@ class MyApp extends StatelessWidget {
       // home: LoginScreen(),
       color: ColorStyles.appMainColor,
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+          systemOverlayStyle: SystemUiOverlayStyle(
+            // Status bar color
+            statusBarColor: Colors.white, // 안드로이드만?? (iOS에서는 아무 변화없음)
+            statusBarIconBrightness: Brightness.dark,
+            // statusBarBrightness: Brightness.light, // iOS에서 먹히는 설정(검정 글씨로 표시됨)
+          ),
+        ),
         primaryColor: ColorStyles.appMainColor,
         focusColor: ColorStyles.appMainColor,
         hoverColor: ColorStyles.appMainColor,
