@@ -4,6 +4,7 @@ import 'package:granity/design/colors.dart';
 import 'package:granity/widgets/BaseAppBar.dart';
 import 'package:granity/widgets/badgeWigets/approval_badge.dart';
 import 'package:granity/widgets/badgeWigets/not_approval_badge.dart';
+import 'package:granity/widgets/badgeWigets/submit_badge.dart';
 import 'package:granity/widgets/buttonWidgets/base_button.dart';
 import 'package:granity/widgets/buttonWidgets/gray_small_button.dart';
 import 'package:granity/widgets/buttonWidgets/main_color_button.dart';
@@ -100,7 +101,7 @@ class _MyGraduationScreenState extends State<MyGraduationScreen> {
                                             Container(
                                               margin: const EdgeInsets.only(
                                                   right: 15),
-                                              child: ApprovalBadgeWidget(),
+                                              child: SubmitBadgeWidget(),
                                             ),
                                             const Flexible(
                                                 child: Column(

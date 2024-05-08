@@ -5,8 +5,8 @@ import 'package:granity/design/colors.dart';
 Container StatusBadgeWidget({required backgroundColor, required Widget}) {
   return Container(
       alignment: Alignment.center,
-      width: 70,
-      padding: const EdgeInsets.fromLTRB(15, 7, 15, 7),
+      width: 80,
+      padding: const EdgeInsets.fromLTRB(10, 7, 10, 7),
       decoration: BoxDecoration(
           color: backgroundColor, borderRadius: BorderRadius.circular(5)),
       child: Widget);

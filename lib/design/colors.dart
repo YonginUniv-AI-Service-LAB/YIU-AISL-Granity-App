@@ -23,6 +23,8 @@ abstract class ColorStyles {
 // 졸업요건 상태
   static const statusGreen = Color(0xff568A35);
   static const statusGreenLight = Color(0xffE3F7D3);
+  static const statusBlue = Color(0xff00A3ED);
+  static const statusBlueLight = Color(0xffEEFBFF);
   static const statusYellow = Color(0xffE9BA36);
   static const statusYellowLight = Color(0xffFFEECA);
   static const statusRed = Color(0xffFC5230);
