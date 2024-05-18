@@ -20,7 +20,7 @@ import 'package:granity/screens/major/curriculum_form.dart';
 import 'package:granity/screens/major/curriculum_list.dart';
 import 'package:granity/screens/major/lab_form.dart';
 import 'package:granity/screens/major/lab_list.dart';
-import 'package:granity/screens/major/major_information.dart';
+import 'package:granity/screens/major/major_home.dart';
 import 'package:granity/screens/major/major_information_form.dart';
 import 'package:granity/screens/major/professor_detail.dart';
 import 'package:granity/screens/major/professor_form.dart';
@@ -389,8 +389,7 @@ final GoRouter routes = GoRouter(
 
     // major
     GoRoute(
-        path: '/major',
-        builder: (context, state) => const MajorInformationScreen()),
+        path: '/major', builder: (context, state) => const MajorHomeScreen()),
     GoRoute(
         path: '/major/form',
         builder: (context, state) => MajorInformationFormScreen()),

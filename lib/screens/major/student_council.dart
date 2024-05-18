@@ -22,14 +22,15 @@ class _StudentCouncilScreenState extends State<StudentCouncilScreen> {
     return GestureDetector(
         onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
         child: Scaffold(
-            appBar: BaseAppBar(appBar: AppBar(), title: "학생회", center: true),
+            // appBar: BaseAppBar(appBar: AppBar(), title: "학생회", center: true),
             body: Container(
-              color: Colors.white,
-              padding: const EdgeInsets.fromLTRB(50, 30, 50, 30),
-              margin: const EdgeInsets.only(bottom: 30),
-              child: SingleChildScrollView(
-                child: Column(children: [MainColorButtonWidget(title: '학생회', onPressed: () => {print('로그인')})]),
-              ),
-            )));
+          color: Colors.white,
+          padding: const EdgeInsets.fromLTRB(50, 30, 50, 30),
+          margin: const EdgeInsets.only(bottom: 30),
+          child: const Expanded(child: Text('학생회')),
+          // child: SingleChildScrollView(
+          //   child: Column(children: [MainColorButtonWidget(title: '학생회', onPressed: () => {print('로그인')})]),
+          // ),
+        )));
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:granity/data/noticeList.dart';
 import 'package:granity/design/colors.dart';
 import 'package:granity/widgets/BaseAppBar.dart';
@@ -66,7 +67,10 @@ class _MyGraduationScreenState extends State<MyGraduationScreen> {
                               margin: const EdgeInsets.only(top: 10),
                               child: GraySmallButtonWidget(
                                   title: "컴퓨터과학과 졸업요건",
-                                  onPressed: () => print('컴퓨터과학과 졸업요건'))),
+                                  onPressed: () async {
+                                  final result = await context.push('/notice');
+                                },
+                              )),
                         ]),
                   ),
                   Expanded(
