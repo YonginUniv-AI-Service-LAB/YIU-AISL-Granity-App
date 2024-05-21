@@ -60,6 +60,19 @@ class _MainScreenState extends State<MainScreen> {
                     final result = await context.push('/test/listview/basic');
                   },
                 ),
+                MainColorButtonWidget(
+                  title: '파이어베이스 인증',
+                  onPressed: () async {
+                    final result =
+                        await context.push('/test/firebase/auth/signin');
+                  },
+                ),
+                MainColorButtonWidget(
+                  title: '파이어베이스 메시지',
+                  onPressed: () async {
+                    final result = await context.push('/test/firebase/message');
+                  },
+                ),
               ]),
             ),
           ),

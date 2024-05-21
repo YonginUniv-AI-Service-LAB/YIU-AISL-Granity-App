@@ -35,6 +35,10 @@ import 'package:granity/screens/notice/notice_list.dart';
 import 'package:granity/screens/test/basic_listView.dart';
 import 'package:granity/screens/test/custom_listView.dart';
 import 'package:granity/screens/test/error_listView.dart';
+import 'package:granity/screens/test/firebase_auth_signin.dart';
+import 'package:granity/screens/test/firebase_auth_signup.dart';
+import 'package:granity/screens/test/firebase_message.dart';
+import 'package:granity/screens/test/test_home.dart';
 import 'package:granity/screens/user/comment_list.dart';
 import 'package:granity/screens/user/post_list.dart';
 import 'package:granity/screens/user/push_list.dart';
@@ -451,5 +455,17 @@ final GoRouter routes = GoRouter(
     GoRoute(
         path: '/test/listview/custom',
         builder: (context, state) => const TestCustomListViewScreen()),
+    GoRoute(
+        path: '/test/firebase/auth/signin',
+        builder: (context, state) => const TestFirebaseAuthSignInScreen()),
+    GoRoute(
+        path: '/test/firebase/auth/signup',
+        builder: (context, state) => const TestFirebaseAuthSignUpScreen()),
+    GoRoute(
+        path: '/test/firebase/message',
+        builder: (context, state) => const TestFirebaseMessageScreen()),
+    GoRoute(
+        path: '/test/home',
+        builder: (context, state) => const TestHomeScreen()),
   ],
 );

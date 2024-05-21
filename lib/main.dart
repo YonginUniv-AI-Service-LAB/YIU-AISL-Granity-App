@@ -1,14 +1,28 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:granity/design/colors.dart';
 import 'package:granity/routes.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await dotenv.load(fileName: '.env');
   // ex) dotenv.load(fileName: 'assets/config/.env')
+
+  // firebase 서비스 사용
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  // fcm 토큰 요청 및 획득
+  String? fcmToken = await FirebaseMessaging.instance.getToken();
+  print("===== fcm =====");
+  print(fcmToken);
+  print("===== fcm =====");
   runApp(const ProviderScope(child: MyApp()));
 }
 
