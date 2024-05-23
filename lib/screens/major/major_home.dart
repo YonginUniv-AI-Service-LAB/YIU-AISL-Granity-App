@@ -45,108 +45,104 @@ class _MajorHomeScreenState extends State<MajorHomeScreen>
             body: Container(
               color: Colors.white,
               margin: const EdgeInsets.only(bottom: 30),
-              child: Expanded(
-                child: DefaultTabController(
-                  length: 4,
-                  child: Expanded(
-                    child: Column(
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.only(top: 10),
-                          child: TabBar(
-                              controller: tabController,
-                              labelColor: ColorStyles.appMainColor,
-                              indicatorColor: ColorStyles.appMainColor,
-                              tabs: const [
-                                Tab(text: "학과 정보"),
-                                Tab(text: "구성원"),
-                                Tab(text: "커리큘럼"),
-                                Tab(text: "연구실"),
-                              ]),
-                        ),
-                        Expanded(
-                          child: TabBarView(
-                            controller: tabController,
-                            children: [
-                              const MajorInformationScreen(),
-                              // SingleChildScrollView(
-                              //   scrollDirection: Axis.vertical,
-                              //   padding:
-                              //       const EdgeInsets.fromLTRB(30, 30, 30, 30),
-                              //   child: Column(
-                              //     children: [
-                              //       const Text(
-                              //         '교수진',
-                              //         style: TextStyle(
-                              //             fontWeight: FontWeight.bold,
-                              //             fontSize: 20,
-                              //             color: ColorStyles.textBlackColor),
-                              //       ),
-                              //       view_professor()
-                              //       // StudentCouncilScreen()
-                              //     ],
-                              //   ),
-                              // ),
-                              Container(
-                                width: 10,
-                                color: const Color.fromRGBO(91, 91, 91, 1),
-                                child: const Center(
-                                  child: Text(
-                                    'Tab2',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 56,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ),
-                              ),
-                              // Container(
-                              //   width: 10,
-                              //   color: const Color.fromRGBO(91, 91, 91, 1),
-                              //   child: const Center(
-                              //     child: Text(
-                              //       'Tab2',
-                              //       style: TextStyle(
-                              //           color: Colors.white,
-                              //           fontSize: 56,
-                              //           fontWeight: FontWeight.bold),
-                              //     ),
-                              //   ),
-                              // ),
-                              Container(
-                                width: 10,
-                                color: const Color.fromRGBO(91, 91, 91, 1),
-                                child: const Center(
-                                  child: Text(
-                                    'Tab3',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 56,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                width: 10,
-                                color: const Color.fromRGBO(91, 91, 91, 1),
-                                child: const Center(
-                                  child: Text(
-                                    'Tab4',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 56,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ),
-                              ),
-                              // CurriculumListScreen(),
-                              // LabListScreen(),
-                            ],
-                          ),
-                        )
-                      ],
+              child: DefaultTabController(
+                length: 4,
+                child: Column(
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(top: 10),
+                      child: TabBar(
+                          controller: tabController,
+                          labelColor: ColorStyles.appMainColor,
+                          indicatorColor: ColorStyles.appMainColor,
+                          tabs: const [
+                            Tab(text: "학과 정보"),
+                            Tab(text: "구성원"),
+                            Tab(text: "커리큘럼"),
+                            Tab(text: "연구실"),
+                          ]),
                     ),
-                  ),
+                    Expanded(
+                      child: TabBarView(
+                        controller: tabController,
+                        children: [
+                          const MajorInformationScreen(),
+                          // SingleChildScrollView(
+                          //   scrollDirection: Axis.vertical,
+                          //   padding:
+                          //       const EdgeInsets.fromLTRB(30, 30, 30, 30),
+                          //   child: Column(
+                          //     children: [
+                          //       const Text(
+                          //         '교수진',
+                          //         style: TextStyle(
+                          //             fontWeight: FontWeight.bold,
+                          //             fontSize: 20,
+                          //             color: ColorStyles.textBlackColor),
+                          //       ),
+                          //       view_professor()
+                          //       // StudentCouncilScreen()
+                          //     ],
+                          //   ),
+                          // ),
+                          Container(
+                            width: 10,
+                            color: const Color.fromRGBO(91, 91, 91, 1),
+                            child: const Center(
+                              child: Text(
+                                'Tab2',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 56,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                          // Container(
+                          //   width: 10,
+                          //   color: const Color.fromRGBO(91, 91, 91, 1),
+                          //   child: const Center(
+                          //     child: Text(
+                          //       'Tab2',
+                          //       style: TextStyle(
+                          //           color: Colors.white,
+                          //           fontSize: 56,
+                          //           fontWeight: FontWeight.bold),
+                          //     ),
+                          //   ),
+                          // ),
+                          Container(
+                            width: 10,
+                            color: const Color.fromRGBO(91, 91, 91, 1),
+                            child: const Center(
+                              child: Text(
+                                'Tab3',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 56,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            width: 10,
+                            color: const Color.fromRGBO(91, 91, 91, 1),
+                            child: const Center(
+                              child: Text(
+                                'Tab4',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 56,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                          // CurriculumListScreen(),
+                          // LabListScreen(),
+                        ],
+                      ),
+                    )
+                  ],
                 ),
               ),
             )));

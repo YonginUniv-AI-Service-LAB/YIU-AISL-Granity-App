@@ -64,7 +64,7 @@ class _MajorInformationScreenState extends State<MajorInformationScreen> {
                         ),
                         BaseBodyTextWidget(
                             title: majorInfo['major']['greetings']!),
-                        const Gap(20),
+                        const Gap(30),
                         Align(
                           alignment: Alignment.centerLeft,
                           child: BaseLabelTextWidget(title: '교육목적'),
@@ -73,7 +73,7 @@ class _MajorInformationScreenState extends State<MajorInformationScreen> {
                           alignment: Alignment.centerLeft,
                           child: BaseBodyTextWidget(title: purpose),
                         ),
-                        const Gap(10),
+                        const Gap(15),
                         Align(
                           alignment: Alignment.centerLeft,
                           child: BaseLabelTextWidget(title: '교육목표'),
@@ -82,7 +82,7 @@ class _MajorInformationScreenState extends State<MajorInformationScreen> {
                           alignment: Alignment.centerLeft,
                           child: BaseBodyTextWidget(title: goal),
                         ),
-                        const Gap(10),
+                        const Gap(15),
                         Align(
                           alignment: Alignment.centerLeft,
                           child: BaseLabelTextWidget(title: '졸업 후 진로'),
@@ -91,7 +91,7 @@ class _MajorInformationScreenState extends State<MajorInformationScreen> {
                           alignment: Alignment.centerLeft,
                           child: BaseBodyTextWidget(title: afterGraduation),
                         ),
-                        const Gap(10),
+                        const Gap(15),
                         Align(
                           alignment: Alignment.centerLeft,
                           child: BaseLabelTextWidget(title: '취득가능 자격 및 면허'),

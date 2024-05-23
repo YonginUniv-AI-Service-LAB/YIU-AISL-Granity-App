@@ -38,6 +38,7 @@ import 'package:granity/screens/test/error_listView.dart';
 import 'package:granity/screens/test/firebase_auth_signin.dart';
 import 'package:granity/screens/test/firebase_auth_signup.dart';
 import 'package:granity/screens/test/firebase_message.dart';
+import 'package:granity/screens/test/ocr.dart';
 import 'package:granity/screens/test/test_home.dart';
 import 'package:granity/screens/user/comment_list.dart';
 import 'package:granity/screens/user/post_list.dart';
@@ -467,5 +468,7 @@ final GoRouter routes = GoRouter(
     GoRoute(
         path: '/test/home',
         builder: (context, state) => const TestHomeScreen()),
+    GoRoute(
+        path: '/test/ocr', builder: (context, state) => const TestOCRScreen()),
   ],
 );
