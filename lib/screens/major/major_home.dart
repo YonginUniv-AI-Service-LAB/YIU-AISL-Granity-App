@@ -9,6 +9,8 @@ import 'package:granity/screens/major/major_information.dart';
 import 'package:granity/screens/major/professor_list.dart';
 import 'package:granity/screens/major/student_council.dart';
 import 'package:granity/widgets/BaseAppBar.dart';
+import 'package:granity/widgets/textWidgets/base_label_text.dart';
+import 'package:granity/widgets/textWidgets/underline_text.dart';
 
 class MajorHomeScreen extends StatefulWidget {
   const MajorHomeScreen({Key? key}) : super(key: key);
@@ -67,37 +69,48 @@ class _MajorHomeScreenState extends State<MajorHomeScreen>
                         controller: tabController,
                         children: [
                           const MajorInformationScreen(),
-                          // SingleChildScrollView(
-                          //   scrollDirection: Axis.vertical,
-                          //   padding:
-                          //       const EdgeInsets.fromLTRB(30, 30, 30, 30),
-                          //   child: Column(
-                          //     children: [
-                          //       const Text(
-                          //         '교수진',
-                          //         style: TextStyle(
-                          //             fontWeight: FontWeight.bold,
-                          //             fontSize: 20,
-                          //             color: ColorStyles.textBlackColor),
-                          //       ),
-                          //       view_professor()
-                          //       // StudentCouncilScreen()
-                          //     ],
-                          //   ),
-                          // ),
-                          Container(
-                            width: 10,
-                            color: const Color.fromRGBO(91, 91, 91, 1),
-                            child: const Center(
-                              child: Text(
-                                'Tab2',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 56,
-                                    fontWeight: FontWeight.bold),
-                              ),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.vertical,
+                            padding: const EdgeInsets.fromLTRB(30, 30, 30, 30),
+                            child: Column(
+                              children: [
+                                // Align(
+                                //   alignment: Alignment.centerLeft,
+                                //   child: BaseLabelTextWidget(
+                                //       title: '교수진', fontSize: 20),
+                                // ),
+                                UnderlineTextWidget(
+                                    width: 150,
+                                    title: '교수진',
+                                    fontSize: 20,
+                                    color: ColorStyles.appSubColor,
+                                    thickness: 3.0),
+                                view_professor(),
+
+                                UnderlineTextWidget(
+                                    width: 150,
+                                    title: '학생회',
+                                    fontSize: 20,
+                                    color: ColorStyles.appSubColor,
+                                    thickness: 3.0),
+
+                                // StudentCouncilScreen()
+                              ],
                             ),
                           ),
+                          // Container(
+                          //   width: 10,
+                          //   color: const Color.fromRGBO(91, 91, 91, 1),
+                          //   child: const Center(
+                          //     child: Text(
+                          //       'Tab2',
+                          //       style: TextStyle(
+                          //           color: Colors.white,
+                          //           fontSize: 56,
+                          //           fontWeight: FontWeight.bold),
+                          //     ),
+                          //   ),
+                          // ),
                           // Container(
                           //   width: 10,
                           //   color: const Color.fromRGBO(91, 91, 91, 1),

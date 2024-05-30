@@ -67,7 +67,8 @@ class _MajorInformationScreenState extends State<MajorInformationScreen> {
                         const Gap(30),
                         Align(
                           alignment: Alignment.centerLeft,
-                          child: BaseLabelTextWidget(title: '교육목적'),
+                          child:
+                              BaseLabelTextWidget(title: '교육목적', fontSize: 18),
                         ),
                         Align(
                           alignment: Alignment.centerLeft,
@@ -76,7 +77,8 @@ class _MajorInformationScreenState extends State<MajorInformationScreen> {
                         const Gap(15),
                         Align(
                           alignment: Alignment.centerLeft,
-                          child: BaseLabelTextWidget(title: '교육목표'),
+                          child:
+                              BaseLabelTextWidget(title: '교육목표', fontSize: 18),
                         ),
                         Align(
                           alignment: Alignment.centerLeft,
@@ -85,7 +87,8 @@ class _MajorInformationScreenState extends State<MajorInformationScreen> {
                         const Gap(15),
                         Align(
                           alignment: Alignment.centerLeft,
-                          child: BaseLabelTextWidget(title: '졸업 후 진로'),
+                          child: BaseLabelTextWidget(
+                              title: '졸업 후 진로', fontSize: 18),
                         ),
                         Align(
                           alignment: Alignment.centerLeft,
@@ -94,12 +97,19 @@ class _MajorInformationScreenState extends State<MajorInformationScreen> {
                         const Gap(15),
                         Align(
                           alignment: Alignment.centerLeft,
-                          child: BaseLabelTextWidget(title: '취득가능 자격 및 면허'),
+                          child: BaseLabelTextWidget(
+                              title: '취득가능 자격 및 면허', fontSize: 18),
                         ),
                         Align(
                           alignment: Alignment.centerLeft,
                           child: BaseBodyTextWidget(title: certificate),
-                        )
+                        ),
+                        const Gap(15),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: BaseLabelTextWidget(
+                              title: '마 여기에 학과 연혁 넣으라!!!', fontSize: 18),
+                        ),
                       ]),
                 ],
               )),

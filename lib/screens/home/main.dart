@@ -45,19 +45,13 @@ class _MainScreenState extends State<MainScreen> {
                 MainColorButtonWidget(
                   title: '나의 졸업 요건',
                   onPressed: () async {
-                    final result = await context.push('/major');
+                    final result = await context.push('/graduation');
                   },
                 ),
                 MainColorButtonWidget(
                   title: '게시판',
                   onPressed: () async {
                     final result = await context.push('/board');
-                  },
-                ),
-                MainColorButtonWidget(
-                  title: '매칭리스트',
-                  onPressed: () async {
-                    final result = await context.push('/test/listview/basic');
                   },
                 ),
                 MainColorButtonWidget(

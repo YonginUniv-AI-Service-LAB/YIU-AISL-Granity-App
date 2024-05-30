@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:granity/data/graduation.dart';
 import 'package:granity/data/noticeList.dart';
 import 'package:granity/design/colors.dart';
 import 'package:granity/widgets/BaseAppBar.dart';
@@ -47,7 +48,7 @@ class _MyGraduationScreenState extends State<MyGraduationScreen> {
                         children: [
                           const Text.rich(
                             TextSpan(
-                              text: '학교 탈출까지\n',
+                              text: '학교 졸업까지\n',
                               style: TextStyle(
                                   fontSize: 27,
                                   fontWeight: FontWeight.w500,
@@ -66,8 +67,8 @@ class _MyGraduationScreenState extends State<MyGraduationScreen> {
                               alignment: Alignment.centerLeft,
                               margin: const EdgeInsets.only(top: 10),
                               child: GraySmallButtonWidget(
-                                  title: "컴퓨터과학과 졸업요건",
-                                  onPressed: () async {
+                                title: "컴퓨터과학과 졸업요건",
+                                onPressed: () async {
                                   final result = await context.push('/notice');
                                 },
                               )),
@@ -90,9 +91,10 @@ class _MyGraduationScreenState extends State<MyGraduationScreen> {
                               // physics: const NeverScrollableScrollPhysics(),
                               padding: const EdgeInsets.all(20),
                               // shrinkWrap: true,
-                              itemCount: notices_test_data.length,
+                              itemCount: graduation_test_data.length,
                               itemBuilder: (BuildContext context, int index) {
-                                dynamic notice = notices_test_data[index];
+                                dynamic graduation =
+                                    graduation_test_data[index];
                                 return Container(
                                     alignment: Alignment.center,
                                     child: BaseButtonWidget(
@@ -105,16 +107,20 @@ class _MyGraduationScreenState extends State<MyGraduationScreen> {
                                             Container(
                                               margin: const EdgeInsets.only(
                                                   right: 15),
-                                              child: SubmitBadgeWidget(),
+                                              child: graduation['status'] == 0
+                                                  ? SubmitBadgeWidget()
+                                                  : graduation['status'] == 1
+                                                      ? ApprovalBadgeWidget()
+                                                      : NotApprovalBadgeWidget(),
                                             ),
-                                            const Flexible(
+                                            Expanded(
                                                 child: Column(
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  '전공 자격증 취득(기사 이상) 1개sdf',
-                                                  style: TextStyle(
+                                                  graduation['contents'],
+                                                  style: const TextStyle(
                                                       color: ColorStyles
                                                           .textBlackColor,
                                                       fontSize: 17,
@@ -122,8 +128,8 @@ class _MyGraduationScreenState extends State<MyGraduationScreen> {
                                                           FontWeight.w700),
                                                 ),
                                                 Text(
-                                                  '2024-04-11',
-                                                  style: TextStyle(
+                                                  graduation['created_at'],
+                                                  style: const TextStyle(
                                                     color: ColorStyles
                                                         .textBodyColor,
                                                     fontSize: 14,
